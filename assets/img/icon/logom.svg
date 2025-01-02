@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 800 400">
+  <!-- Outer Rectangle -->
+  <rect x="10" y="10" width="780" height="380" fill="none" stroke="#b4d877" stroke-width="10" rx="20" />
+
+  <!-- Circular Logo -->
+  <circle cx="120" cy="200" r="80" fill="none" stroke="#77a35f" stroke-width="10" />
+  <path d="M120,140 Q100,130 90,160 Q80,190 100,210 Q120,230 130,220 Q150,200 140,170 Q130,150 120,140 Z" fill="#77a35f" />
+  <path d="M140,170 Q150,160 160,170 Q170,180 170,190 Q170,200 160,210 Q150,220 140,210" fill="#77a35f" />
+
+  <!-- Text: Mermaid Group -->
+  <text x="230" y="170" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="#33691e">MERMAID</text>
+  <text x="460" y="170" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="#b71c1c">GROUP</text>
+
+  <!-- Tagline -->
+  <text x="230" y="210" font-family="Arial, sans-serif" font-size="24" fill="#666">for the nation...</text>
+
+  <!-- Website -->
+  <text x="230" y="250" font-family="Arial, sans-serif" font-size="24" fill="#33691e">www.mermaidgroupbd.com</text>
+</svg>

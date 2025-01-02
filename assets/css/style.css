@@ -98,7 +98,8 @@ Version: 1.0.0
   --black-color: #000000;
   --black-color2: #1B1B1B;
   --black-color3: #1A1A1A;
-  --gray-color: #DDE8DD;
+  /* --gray-color: #DDE8DD; */
+  --gray-color: #bbdabb;
   --gray-color2: #E5E4E9;
   --white-color: #ffffff;
   --light-color: #A4B5BA;
