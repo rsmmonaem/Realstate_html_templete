@@ -90,16 +90,16 @@ Version: 1.0.0
 :root {
   --theme-color: #1C2D37;
   --theme-color2: #EED26E;
-  --title-color: #4CAF50;
-  --title-dark: #4caf50;
-  --body-color: #4CAF50;
+  --title-color: #0D0D0C;
+  --title-dark: #364440;
+  --body-color: #6E7070;
   --smoke-color: #C0CDD1;
   --smoke-color2: #666666;
   --black-color: #000000;
   --black-color2: #1B1B1B;
   --black-color3: #1A1A1A;
   /* --gray-color: #DDE8DD; */
-  --gray-color: #b41b1f17;
+  --gray-color: #bbdabb;
   --gray-color2: #E5E4E9;
   --white-color: #ffffff;
   --light-color: #A4B5BA;
@@ -268,7 +268,7 @@ p:empty {
 p {
   font-family: var(--body-font);
   margin: 0 0 18px 0;
-  color: var(--theme-color);
+  color: var(--body-color);
   line-height: 1.75;
 }
 
@@ -299,13 +299,12 @@ h5,
 .h6,
 h6 {
   font-family: var(--title-font);
-  color: #000000;
+  color: var(--title-color);
   text-transform: none;
   font-weight: 700;
   line-height: 1.4;
   margin: 0 0 15px 0;
 }
-
 
 .h1,
 h1 {
@@ -2490,9 +2489,9 @@ textarea.style2 {
 .form-group.style-border3 select,
 .form-group.style-border3 textarea,
 .form-group.style-border3 input {
-  background: #ffffff;
-  border: 1px solid #F44336;
-  color: #000000;
+  background: transparent;
+  border: 1px solid rgba(221, 232, 221, 0.5);
+  color: var(--gray-color);
   border-radius: 50px;
 }
 
@@ -2527,7 +2526,7 @@ textarea.style2 {
 }
 
 .form-group.style-border3 i {
-  /* color: var(--gray-color); */
+  color: var(--gray-color);
 }
 
 .form-group.style-white .form-select,
@@ -5253,7 +5252,7 @@ hr.title-line {
 }
 
 .bg-title-dark {
-  /* background-color: var(--title-dark) !important; */
+  background-color: var(--title-dark) !important;
 }
 
 .gradient-body {
@@ -9471,7 +9470,7 @@ ol.wp-block-rss {
 .copyright-wrap {
   padding: 20px 0;
   background-size: 100% auto;
-  background-color: var(--title-dark);
+  background-color: rgba(23, 26, 30, 0.4);
 }
 
 .copyright-wrap .copyright-text {
@@ -9826,7 +9825,7 @@ ol.wp-block-rss {
 }
 
 .footer-layout2 .copyright-wrap .copyright-text {
-  color: #000000;
+  color: #C2D6C2;
 }
 
 .footer-layout2 .copyright-wrap .copyright-text a {
@@ -15472,7 +15471,7 @@ span.select2-selection.select2-selection--single:focus {
 .location-map .location-map-address .text {
   font-size: 14px;
   font-weight: 400;
-  color: var(--theme-color);
+  color: var(--gray-color);
   margin-bottom: 8px;
   font-family: var(--body-font);
 }
@@ -16245,9 +16244,9 @@ span.select2-selection.select2-selection--single:focus {
 
 .img-box2 .about-tag .play-btn i {
   line-height: 110px;
-  background: var(--title-color);
+  background: var(--gray-color);
   --icon-font-size: 26px;
-  border: 20px solid #FF5722;
+  border: 20px solid var(--white-color);
 }
 
 .img-box2 .about-tag .about-experience-tag {
@@ -17077,7 +17076,7 @@ span.select2-selection.select2-selection--single:focus {
 }
 
 .team-card.style2 .team-card-content {
-  background: #b11d24;
+  background: var(--gray-color);
   padding: 24px;
   -webkit-transition: 0.4s;
   transition: 0.4s;
@@ -17099,7 +17098,7 @@ span.select2-selection.select2-selection--single:focus {
 }
 
 .team-card.style2 .box-title a {
-  color: white;
+  color: var(--title-dark);
 }
 
 .team-card.style2 .box-title a:hover {
@@ -17107,7 +17106,7 @@ span.select2-selection.select2-selection--single:focus {
 }
 
 .team-card.style2 .team-desig {
-  color: black;
+  color: var(--title-dark);
 }
 
 .team-card.style2 .icon-btn {
