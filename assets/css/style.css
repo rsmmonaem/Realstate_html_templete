@@ -16225,6 +16225,9 @@ span.select2-selection.select2-selection--single:focus {
 .img-box2 .about-tag {
   position: absolute;
   top: 60px;
+  @media screen and (max-width: 512px) {
+    display: none;
+  }
   /* Medium devices */
   /* Extra small devices */
 }
@@ -18227,7 +18230,7 @@ span.select2-selection.select2-selection--single:focus {
     -webkit-box-flex: 100%;
     -webkit-flex: 100%;
         -ms-flex: 100%;
-            flex: 100%;
+            flex: 50%;
   }
 }
 
