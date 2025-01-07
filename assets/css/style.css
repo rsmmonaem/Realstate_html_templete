@@ -3560,14 +3560,14 @@ textarea.is-invalid {
 }
 
 .th-preloader .animation-preloader .txt-loading .characters {
-  color: rgba(0, 0, 0, 0.2);
+  color: rgba(214, 55, 15, 0.2);
   position: relative;
 }
 
 .th-preloader .animation-preloader .txt-loading .characters:before {
   -webkit-animation: characters 4s infinite;
           animation: characters 4s infinite;
-  color: var(--theme-color);
+  color: green;
   content: attr(preloader-text);
   left: 0;
   opacity: 0;
@@ -4158,7 +4158,7 @@ textarea.is-invalid {
   line-height: var(--icon-size, 56px);
   text-align: center;
   background-color: var(--white-color);
-  color: var(--theme-color);
+  color: white;
   font-size: var(--icon-font-size, 1.4em);
   border-radius: 50%;
   z-index: 1;
