@@ -9461,11 +9461,11 @@ ol.wp-block-rss {
 
 .footer-links a {
   font-family: var(--body-font);
-  color: var(--light-color);
+  color: #fff;
 }
 
 .footer-links a:hover {
-  color: var(--white-color);
+  color: yellow;
 }
 
 .copyright-wrap {
