@@ -304,6 +304,13 @@
             }
         };
 
+        // Check if the current slider is the one with ID 'clientSlider1'
+        if (thSlider.attr('id') === 'clientSlider1') {
+            sliderDefault.autoplay = {delay: 0, disableOnInteraction: false};
+            sliderDefault.speed = 5000; // Adjust the speed as needed
+            sliderDefault.loop = true; // Ensure loop is enabled
+        }
+
         var options = JSON.parse(thSlider.attr('data-slider-options'));
         options = $.extend({}, sliderDefault, options);
         var swiper = new Swiper(thSlider.get(0), options); // Assign the swiper variable
@@ -315,7 +322,7 @@
     });
 
     // Function to add animation classes
-    function animationProperties() {
+    function animationProperties() { 
         $('[data-ani]').each(function () {
             var animationName = $(this).data('ani');
             $(this).addClass(animationName);
