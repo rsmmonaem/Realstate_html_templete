@@ -28815,5 +28815,365 @@ span.select2-selection.select2-selection--single:focus {
   }
 }
 
+/* privacy-policy */
+
+
+.privacy-policy-section {
+  padding: 40px 0 60px 0px;
+  background-color: #f9f9f9;
+}
+
+.section-title span{
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+  background-color: #28a745; /* Green background color */
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); /* Light border bottom shadow */
+}
+
+.sub-title1 {
+  font-size: 24px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.sub-sub-title {
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.privacy-policy-section p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.privacy-policy-section ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.privacy-policy-section ul li {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 10px;
+}
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Mobile view adjustments */
+@media (max-width: 767px) {
+  .section-title {
+      font-size: 28px;
+  }
+
+  .sub-title {
+      font-size: 20px;
+  }
+
+  .sub-sub-title {
+      font-size: 18px;
+  }
+
+  .privacy-policy-section p, .privacy-policy-section ul li {
+      font-size: 14px;
+  }
+}
+
+/* faq */
+
+.section-title2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.highlight {
+  background-color: #28a745; /* Green background color */
+  color: #fff; /* White text color */
+  padding: 10px 20px; /* Padding */
+  border-radius: 5px; /* Border radius */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); /* Light border bottom shadow */
+  font-size: 36px; /* Font size */
+}
+
+.faq-section {
+  padding: 40px 0 60px 0px;
+  background-color: #f9f9f9;
+}
+
+.faq-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  margin-bottom: 30px;
+}
+
+.faq-question {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.faq-answer {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #555;
+}
+
+/* Mobile view adjustments */
+@media (max-width: 767px) {
+  .section-title {
+      font-size: 28px;
+  }
+
+  .highlight {
+      font-size: 28px;
+  }
+
+  .faq-question {
+      font-size: 20px;
+  }
+
+  .faq-answer {
+      font-size: 14px;
+  }
+}
+
+/* terms of services */
+
+.custom-terms-section {
+  background-color: #f9f9f9;
+  padding: 50px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.custom-section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.custom-highlight {
+  color: #28a745;
+}
+
+.custom-terms-content {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.custom-sub-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #222;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.custom-terms-content p {
+  margin-bottom: 15px;
+}
+
+.custom-terms-content ul {
+  margin-left: 20px;
+  list-style-type: disc;
+}
+
+.custom-terms-content ul li {
+  margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .custom-section-title {
+      font-size: 2rem;
+      margin-bottom: 30px;
+  }
+
+  .custom-sub-title {
+      font-size: 1.25rem;
+  }
+
+  .custom-terms-content {
+      font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .custom-section-title {
+      font-size: 1.75rem;
+  }
+
+  .custom-sub-title {
+      font-size: 1.1rem;
+  }
+
+  .custom-terms-content {
+      font-size: 0.9rem;
+  }
+
+  .custom-terms-section {
+      padding: 30px 15px;
+  }
+}
+
+/* application form */
+
+.pdf-viewer-section {
+  padding: 60px 0 0 0;
+  background-color: #f9f9f9;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 36px;
+  color: #333;
+}
+
+.pdf-viewer {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.pdf-controls {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.pdf-controls .btn {
+  background-color: #28a745;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.pdf-controls .btn:hover {
+  background-color: #218838;
+}
+
+.pdf-controls span {
+  font-size: 18px;
+  color: #333;
+}
+
+/* Mobile view adjustments */
+@media (max-width: 767px) {
+  .section-title {
+      font-size: 28px;
+  }
+
+  .pdf-controls .btn {
+      padding: 8px 16px;
+      font-size: 14px;
+  }
+
+  .pdf-controls span {
+      font-size: 16px;
+  }
+}
+
+/* document download */
+
+.download-section {
+  padding: 60px 0;
+  background-color: #f9f9f9;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 36px;
+  color: #333;
+}
+
+.download-buttons {
+  text-align: center;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.download-buttons .btn {
+  background-color: #28a745;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 0;
+  display: inline-flex;
+  align-items: center;
+}
+
+.download-buttons .btn i {
+  margin-left: 10px;
+}
+
+.download-buttons .btn:hover {
+  background-color: #218838;
+}
+
+.pdf-viewer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.pdf-controls {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.pdf-controls .btn {
+  background-color: #28a745;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.pdf-controls .btn:hover {
+  background-color: #218838;
+}
+
+/* Mobile view adjustments */
+@media (max-width: 767px) {
+  .section-title {
+      font-size: 28px;
+  }
+
+  .download-buttons .btn {
+      padding: 8px 16px;
+      font-size: 14px;
+  }
+
+  .pdf-controls .btn {
+      padding: 8px 16px;
+      font-size: 14px;
+  }
+}
+
 
 /*# sourceMappingURL=style.css.map */
