@@ -33,10 +33,29 @@
 
   /*---------- 01. On Load Function ----------*/
     $(window).on("load", function () {
+        loadHeader();
+        LoadFooter();
         $(".preloader").fadeOut();
     });
 
+    // Load Header
+    function loadHeader() {
+        $('#Header').load('header.html', function(response, status, xhr) {
+            if (status == "error") {
+                console.error('Error loading header: ' + xhr.status + ' ' + xhr.statusText);
+            }
+        });
+    }  
+    
+    function LoadFooter() {
+        $('#Footer').load('footer.html', function(response, status, xhr) {
+            if (status == "error") {
+                console.error('Error loading header: ' + xhr.status + ' ' + xhr.statusText);
+            }
+        });
+    }
     /*---------- 02. Preloader ----------*/
+
     if ($(".preloader").length > 0) {
         $(".preloaderCls").each(function () {
             $(this).on("click", function (e) {
