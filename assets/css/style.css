@@ -3278,14 +3278,21 @@ textarea.is-invalid {
   visibility: hidden;
 }
 
-.th-menu-wrapper .mobile-logo {
+/* .th-menu-wrapper .mobile-logo {
   padding-bottom: 30px;
   padding-top: 40px;
   display: block;
   text-align: center;
   background-color: var(--theme-color);
+} */
+.th-menu-wrapper .mobile-logo {
+  padding-bottom: 30px;
+  padding-top: 40px;
+  display: block;
+  text-align: center;
+  background-color: #ffffff;
+  border-bottom: 2px solid;
 }
-
 .th-menu-wrapper .mobile-logo svg {
   max-width: 185px;
 }
@@ -23286,7 +23293,7 @@ span.select2-selection.select2-selection--single:focus {
   }
   .gallery-list-2 li:nth-child(2) {
     height: auto;
-    width: auto;
+    width: 100%;
   }
 }
 
