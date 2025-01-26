@@ -17084,7 +17084,7 @@ span.select2-selection.select2-selection--single:focus {
 }
 
 .team-card.style2 .team-card-content {
-  background: #b11d24;
+  background: #e5b06a;
   padding: 24px;
   -webkit-transition: 0.4s;
   transition: 0.4s;
@@ -17118,7 +17118,7 @@ span.select2-selection.select2-selection--single:focus {
 }
 
 .team-card.style2 .icon-btn {
-  background: var(--title-dark);
+  background: #1e4c25;
   color: var(--white-color);
 }
 
