@@ -461,8 +461,9 @@ body.popup-open {
      
 
             <!-- ---------------curosel part-------------- -->
-            <!-- <h2 class=" text-white">DITF 2025</h2> -->
-            <h2 style="color: white; background-color: green; text-align: center;">Green-city 2025</h2>
+            <h2 class="section-title text-white dynamic-heading"></h2>
+
+           
             <div class="carosel-container">
                 <button class="prev" onclick="prevSlide()">&#10094;</button>
                 <button class="next" onclick="nextSlide()">&#10095;</button>
@@ -632,10 +633,14 @@ All Js File
 <script>
    const containers = document.querySelectorAll(".grid-container");
 let currentIndex = 0;
-
+// Targeting the heading
+const heading = document.querySelector(".dynamic-heading"); 
+const headings = ["Green-city 2025", "Express City 2025", "Commercial City 2025"];
+// ------slider-------
 function showSlide(index) {
     containers.forEach((container, i) => {
         container.style.display = i === index ? "flex" : "none";
+        heading.textContent = headings[index];
     });
 }
 
@@ -692,11 +697,15 @@ function prevImage() {
 
 // Event listeners
 document.querySelectorAll(".image").forEach(img => {
-    img.addEventListener("click", () => {
+    img.addEventListener("click", (event) => {
+        event.stopPropagation();
+        event.preventDefault();
+        
         const allImages = [...document.querySelectorAll(".image")].map(i => i.src);
-        openPopup(img.src, allImages);
+        openPopup(img.src, allImages); 
     });
 });
+
 
 closePopup.addEventListener("click", () => popup.classList.add("hidden"));
 nextImageBtn.addEventListener("click", nextImage);
