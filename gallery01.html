@@ -41,6 +41,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Outfit:wght@100..900&amp;display=swap" rel="stylesheet">
 
+    <!-- --------boosrap---------- -->
+
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
     <!--==============================
         All CSS File
     ============================== -->
@@ -265,11 +276,12 @@ Property Page Area
                 gap: 10px;
                 /* height: 100%; */
                 overflow: hidden;
+                width: 100%;
             }
 
             .image {
                 width: 100%;
-                height: 100%; /* Ensure the images fill the column height */
+                height: 100%; 
                 object-fit: cover;
                 border-radius: 10px;
             }
@@ -280,6 +292,160 @@ Property Page Area
             .side {
                 height: 305px !important;
             }
+
+      /* -------carosel------------ */
+
+      .carosel-container {
+    position: relative;
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 1000;
+}
+
+.prev {
+    left: 10px; 
+}
+
+.next {
+    right: 10px; 
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .prev,
+    .next {
+        padding: 10px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .prev,
+    .next {
+        padding: 8px;
+        font-size: 18px;
+    }
+}
+/* Popup Styling */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    overflow: hidden;
+}
+
+.popup.hidden {
+    display: none;
+}
+
+.popup-overlay {
+    position: relative;
+    width: 95%;
+    height: 95%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-img {
+    max-width: 100%;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.close-popup {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+    z-index: 10000;
+}
+
+.prev-image, .next-image {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    font-size: 30px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.prev-image:hover, .next-image:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.prev-image {
+    left: 20px;
+}
+
+.next-image {
+    right: 20px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .popup-overlay {
+        width: 100%;
+        height: 100%;
+    }
+
+    .prev-image, .next-image {
+        padding: 10px 15px;
+        font-size: 24px;
+        bottom: 10px;
+        top: auto;
+        transform: none;
+    }
+
+    .prev-image {
+        left: 10px;
+    }
+
+    .next-image {
+        right: 10px;
+    }
+
+    .close-popup {
+        top: 10px;
+        right: 10px;
+        font-size: 30px;
+    }
+}
+
+/* Prevent background scrolling when popup is open */
+body.popup-open {
+    overflow: hidden;
+}
+
+
             /* Media Queries for Responsiveness */
             @media (max-width: 1200px) {
                 .grid-container {
@@ -293,58 +459,275 @@ Property Page Area
                 }
             }
             </style>
-            <h2 class="section-title text-white">DITF 2025</h2>
-            <div class="grid-container">
-                <!-- 1st Column -->
+     
+
+            <!-- ---------------curosel part-------------- -->
+            <!-- <h2 class=" text-white">DITF 2025</h2> -->
+            <h2 style="color: white; background-color: green; text-align: center;">Express City 2025</h2>
+            <div class="carosel-container">
+                <button class="prev" onclick="prevSlide()">&#10094;</button>
+                <button class="next" onclick="nextSlide()">&#10095;</button>
+            
+                <!-- 1st Container (Green city) -->
+                <div class="grid-container">
+                   
+
+                    <!-- -col 1 -->
+                    <div class="column">
+                        <div class="img-shine">
+                            <img src="assets/img/express-city/IMG-20241210-WA0001-min.jpg" alt="Image 1" class="image side">
+                        </div>
+                        <div class="img-shine">
+                            <img src="assets/img/express-city/IMG-20241210-WA0002-min.jpg" alt="Image 2" class="image side">
+                        </div>
+                    </div>
+                    <!-- ---------ceol-2 --------------- -->
+                    <div class="column">
+                        <div class="img-shine">
+                            <img src="assets/img/express-city/IMG-20241210-WA0003-min.jpg" height="100px" alt="Image 3" class="image middle">
+                        </div>
+                        <div class="img-shine">
+                            <img src="assets/img/express-city/IMG-20241210-WA0004-min.jpg" height="100px" alt="Image 4" class="image middle">
+                        </div>
+                        <div class="img-shine">
+                            <img src="assets/img/express-city/IMG-20241203-WA0020-min.jpg" height="100px" alt="Image 5" class="image middle">
+                        </div>
+                    </div>
+                 
+                        <!-- 3rd Column -->
                 <div class="column">
                     <div class="img-shine">
-                        <img src="assets/img/green-city/DSC_0085.JPG" alt="Image 1" class="image side">
-                    </div>
+                       <img src="assets/img/express-city/IMG-20241112-WA0022-min.jpg" alt="Image 6" class="image side">
+                   </div>
                     <div class="img-shine">
-                        <img src="assets/img/green-city/DSC_0088.JPG" alt="Image 2" class="image side">
+                       <img src="assets/img/express-city/IMG-20241127-WA0028-min.jpg" alt="Image 7" class="image side">
+                   </div>
+               </div>
+                </div>
+            
+                <!-- 2nd Container  express city (Initially Hidden) -->
+                <div class="grid-container">
+                    <div class="column">
+                        <div class="img-shine">
+                            <img src="assets/img/express-city/IMG-20241127-WA0030-min.jpg" alt="Image 5" class="image side">
+                        </div>
+                        <div class="img-shine">
+                            <img src="assets/img/express-city/IMG_0254-min.jpg" alt="Image 6" class="image side">
+                        </div>
+                    </div>
+                    <!-- -2nd -->
+                    <div class="column">
+                        <div class="img-shine">
+                            <img src="assets/img/express-city/IMG_0257-min.jpg" height="100px" alt="Image 7" class="image middle">
+                        </div>
+                        <div class="img-shine">
+                            <img src="assets/img/express-city/IMG_0259-min.jpg" height="100px" alt="Image 8" class="image middle">
+                        </div>
+                        <div class="img-shine">
+                            <img src="assets/img/express-city/IMG_0260-min.jpg" height="100px" alt="Image 8" class="image middle">
+                        </div>
+                    </div>
+                            <!-- 3rd Column -->
+                <div class="column">
+                    <div class="img-shine">
+                       <img src="assets/img/express-city/IMG_0403-min.jpg" alt="Image 6" class="image side">
+                   </div>
+                    <div class="img-shine">
+                       <img src="assets/img/express-city/IMG_0404-min.jpg" alt="Image 7" class="image side">
+                   </div>
+               </div>
+                </div>
+            
+                <!-- 3rd Container commercial (Initially Hidden) commercial city -->
+                <div class="grid-container">
+                    <div class="column">
+                        <div class="img-shine">
+                            <img src="assets/img/express-city/IMG_0408-min.jpg" alt="Image 9" class="image side">
+                        </div>
+                        <div class="img-shine">
+                            <img src="assets/img/express-city/IMG_20241111_165914-min.jpg" alt="Image 10" class="image side">
+                        </div>
+                    </div>
+                    <!-- 2nd -->
+                    <div class="column">
+                        <div class="img-shine">
+                            <img src="assets/img/express-city/IMG_20241111_171055-min.jpg" height="100px" alt="Image 12" class="image middle">
+                        </div>
+                        <div class="img-shine">
+                            <img src="assets/img/express-city/IMG_20241130_091619-min.jpg" height="100px" alt="Image 12" class="image middle">
+                        </div>
+                        <div class="img-shine">
+                            <img src="assets/img/express-city/IMG_0255.jpg" height="100px" alt="Image 12" class="image middle">
+                        </div>
+                    </div>
+                    <!--------- 3rd------->
+      
+                    <div class="column">
+                        <div class="img-shine">
+                        <img src="assets/img/express-city/IMG_0257.jpg" alt="Image 6" class="image side">
+                    </div>
+                        <div class="img-shine">
+                        <img src="assets/img/express-city/IMG_0259.jpg" alt="Image 7" class="image side">
                     </div>
                 </div>
 
-                <!-- 2nd Column -->
-                <div class="column">
-                    <div class="img-shine">
-                        <img src="assets/img/green-city/DSC_0090.JPG" height="100px" alt="Image 3" class="image middle">
+                </div>
+
+                <!-- 4th Container commercial (Initially Hidden) commercial city -->
+                <div class="grid-container">
+                    <div class="column">
+                        <div class="img-shine">
+                            <img src="assets/img/express-city/IMG_0260.jpg" alt="Image 9" class="image side">
+                        </div>
+                        <div class="img-shine">
+                            <img src="assets/img/express-city/IMG_0403.jpg" alt="Image 10" class="image side">
+                        </div>
                     </div>
-                    <div class="img-shine">
-                        <img src="assets/img/green-city/DSC_0099.JPG" height="100px" alt="Image 4" class="image middle">
+                    <!-- 2nd -->
+                    <div class="column">
+                        <div class="img-shine">
+                            <img src="assets/img/express-city/IMG_0404.jpg" height="100px" alt="Image 12" class="image middle">
+                        </div>
+                        <div class="img-shine">
+                            <img src="assets/img/express-city/IMG_0407.jpg" height="100px" alt="Image 12" class="image middle">
+                        </div>
+                        <div class="img-shine">
+                            <img src="assets/img/express-city/IMG_0408.jpg" height="100px" alt="Image 12" class="image middle">
+                        </div>
                     </div>
-                    <div class="img-shine">
-                        <img src="assets/img/green-city/DSC_0110.JPG" height="100px" alt="Image 5" class="image middle">
+                    <!--------- 3rd------->
+      
+                    <div class="column">
+                        <div class="img-shine">
+                            <img src="assets/img/express-city/IMG_20241111_154008a.jpg" alt="Image 6" class="image side">
+                        </div>
+                            <div class="img-shine">
+                            <img src="assets/img/express-city/IMG_20241111_165910.jpg" alt="Image 7" class="image side">
+                        </div>
                     </div>
                 </div>
 
-                <!-- 3rd Column -->
-                <div class="column">
-                    <div class="img-shine">
-                        <img src="assets/img/green-city/DSC_0115.JPG" alt="Image 6" class="image side">
+                <!-- 5th Container commercial (Initially Hidden) commercial city -->
+                <div class="grid-container">
+                    <div class="column">
+                        <div class="img-shine">
+                            <img src="assets/img/express-city/IMG_20241111_165914.jpg" alt="Image 9" class="image side">
+                        </div>
+                        <div class="img-shine">
+                            <img src="assets/img/express-city/IMG_20241111_171324.jpg" alt="Image 10" class="image side">
+                        </div>
                     </div>
-                    <div class="img-shine">
-                        <img src="assets/img/green-city/DSC_0117.JPG" alt="Image 7" class="image side">
+                    <!-- 2nd -->
+                    <div class="column">
+                        <div class="img-shine">
+                            <img src="assets/img/express-city/IMG_20241130_091613.jpg" height="100px" alt="Image 12" class="image middle">
+                        </div>
+                        <div class="img-shine">
+                            <img src="assets/img/express-city/IMG_20241130_091619.jpg" height="100px" alt="Image 12" class="image middle">
+                        </div>
+                        <div class="img-shine">
+                            <img src="assets/img/express-city/IMG-20241112-WA0022.jpg" height="100px" alt="Image 12" class="image middle">
+                        </div>
+                    </div>
+                    <!--------- 3rd------->
+      
+                    <div class="column">
+                        <div class="img-shine">
+                            <img src="assets/img/express-city/IMG-20241127-WA0028.jpg" alt="Image 6" class="image side">
+                        </div>
+                            <div class="img-shine">
+                            <img src="assets/img/express-city/IMG-20241127-WA0029.jpg" alt="Image 7" class="image side">
+                        </div>
                     </div>
                 </div>
+                <!-- 7th Container commercial (Initially Hidden) commercial city -->
+                <div class="grid-container">
+                    <div class="column">
+                        <div class="img-shine">
+                            <img src="assets/img/express-city/IMG-20241127-WA0030.jpg" alt="Image 9" class="image side">
+                        </div>
+                        <div class="img-shine">
+                            <img src="assets/img/express-city/IMG-20241127-WA0031.jpg" alt="Image 10" class="image side">
+                        </div>
+                    </div>
+                    <!-- 2nd -->
+                    <div class="column">
+                        <div class="img-shine">
+                            <img src="assets/img/express-city/IMG-20241127-WA0033.jpg" height="100px" alt="Image 12" class="image middle">
+                        </div>
+                        <div class="img-shine">
+                            <img src="assets/img/express-city/IMG-20241203-WA0016.jpg" height="100px" alt="Image 12" class="image middle">
+                        </div>
+                        <div class="img-shine">
+                            <img src="assets/img/express-city/IMG-20241203-WA0020.jpg" height="100px" alt="Image 12" class="image middle">
+                        </div>
+                    </div>
+                    <!--------- 3rd------->
+      
+                    <div class="column">
+                        <div class="img-shine">
+                            <img src="assets/img/express-city/IMG-20241210-WA0001.jpg" alt="Image 6" class="image side">
+                        </div>
+                            <div class="img-shine">
+                            <img src="assets/img/express-city/IMG-20241210-WA0002.jpg" alt="Image 7" class="image side">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7th Container commercial (Initially Hidden) commercial city -->
+                <div class="grid-container">
+                    <div class="column">
+                        <div class="img-shine">
+                            <img src="assets/img/express-city/IMG-20241210-WA0003.jpg" alt="Image 9" class="image side">
+                        </div>
+                        <div class="img-shine">
+                            <img src="assets/img/express-city/IMG-20241210-WA0004.jpg" alt="Image 10" class="image side">
+                        </div>
+                    </div>
+                    <!-- 2nd -->
+                    <div class="column">
+                        <div class="img-shine">
+                            <img src="assets/img/express-city/IMG-20241210-WA0005.jpg" alt="Image 12" class="image side">
+                        </div>
+                        <div class="img-shine">
+                            <img src="assets/img/express-city/IMG-20241210-WA0008.jpg" alt="Image 12" class="image side">
+                        </div>
+                        <!-- <div class="img-shine">
+                            <img src="assets/img/express-city/IMG-20241203-WA0020.jpg" height="100px" alt="Image 12" class="image middle">
+                        </div> -->
+                    </div>
+                    <!--------- 3rd------->
+      
+                    <!-- <div class="column">
+                        <div class="img-shine">
+                            <img src="assets/img/express-city/IMG-20241210-WA0001.jpg" alt="Image 6" class="image side">
+                        </div>
+                            <div class="img-shine">
+                            <img src="assets/img/express-city/IMG-20241210-WA0002.jpg" alt="Image 7" class="image side">
+                        </div>
+                    </div> -->
+                </div>
+
             </div>
+        
 
              <div class="text-center">
                 <div class="th-pagination ">
                     <ul>
                         <li><a class="prev-page" href="gallery.html"><i class="far fa-arrow-left me-2"></i>Previous</a></li>
                         <li><a href="gallery.html">1</a></li>
-                        <li><a class="active" href="gallery01.html">2</a></li>
+                        <li><a class="active"  href="gallery01.html">2</a></li>
                         <li><a href="gallery02.html">3</a></li>
-                        <li><a href="gallery03.html">4</a></li>
-                        <li><a href="gallery04.html">5</a></li>
+                        <!-- <li><a href="gallery03.html">4</a></li>
+                        <li><a href="gallery04.html">5</a></li> -->
                         <li><a class="next-page" href="gallery02.html">Next<i class="far fa-arrow-right ms-2"></i></a></li>
                     </ul>
                 </div>
             </div>
 
         </div>
-    </section><!--==============================
+    </section>
+<!--==============================
 	Footer Area
 ==============================-->
 <div id="Footer"></div>
@@ -384,8 +767,84 @@ All Js File
 <!-- Gsap -->
 <script src="assets/js/gsap.min.js"></script>
 
+<!-----------manually  carosel slider---------- -->
+<script>
+   const containers = document.querySelectorAll(".grid-container");
+let currentIndex = 0;
+
+function showSlide(index) {
+    containers.forEach((container, i) => {
+        container.style.display = i === index ? "flex" : "none";
+    });
+}
+
+function nextSlide() {
+    currentIndex = (currentIndex + 1) % containers.length;
+    showSlide(currentIndex);
+}
+
+function prevSlide() {
+    currentIndex = (currentIndex - 1 + containers.length) % containers.length;
+    showSlide(currentIndex);
+}
+
+// Show first container initially
+showSlide(currentIndex);
+
+// Fullscreen popup functionality
+const popup = document.createElement("div");
+popup.className = "popup hidden";
+popup.innerHTML = `
+    <div class="popup-overlay">
+        <span class="close-popup">&times;</span>
+        <button class="prev-image">&#10094;</button>
+        <img class="popup-img" src="" alt="Fullscreen Image">
+        <button class="next-image">&#10095;</button>
+    </div>
+`;
+document.body.appendChild(popup);
+
+const popupImg = popup.querySelector(".popup-img");
+const closePopup = popup.querySelector(".close-popup");
+const prevImageBtn = popup.querySelector(".prev-image");
+const nextImageBtn = popup.querySelector(".next-image");
+
+let imageList = [];
+let currentImageIndex = 0;
+
+function openPopup(src, images) {
+    imageList = images;
+    currentImageIndex = imageList.indexOf(src);
+    popupImg.src = src;
+    popup.classList.remove("hidden");
+}
+
+function nextImage() {
+    currentImageIndex = (currentImageIndex + 1) % imageList.length;
+    popupImg.src = imageList[currentImageIndex];
+}
+
+function prevImage() {
+    currentImageIndex = (currentImageIndex - 1 + imageList.length) % imageList.length;
+    popupImg.src = imageList[currentImageIndex];
+}
+
+// Event listeners
+document.querySelectorAll(".image").forEach(img => {
+    img.addEventListener("click", () => {
+        const allImages = [...document.querySelectorAll(".image")].map(i => i.src);
+        openPopup(img.src, allImages);
+    });
+});
+
+closePopup.addEventListener("click", () => popup.classList.add("hidden"));
+nextImageBtn.addEventListener("click", nextImage);
+prevImageBtn.addEventListener("click", prevImage);
 
 
+
+ 
+</script>
 <!-- Main Js File -->
 <script src="assets/js/main.js"></script>
 </body>
