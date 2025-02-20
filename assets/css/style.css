@@ -2647,13 +2647,13 @@ input[type="checkbox"].style2:checked ~ label:before {
 }
 
 input[type="radio"] {
-  visibility: hidden;
-  opacity: 0;
-  display: inline-block;
-  vertical-align: middle;
-  width: 0;
-  height: 0;
-  display: none;
+  /* visibility: hidden;
+  opacity: 0; */
+  /* display: inline-block; */
+  /* vertical-align: middle; */
+  /* width: 5px;
+  height: 5px; */
+  display: block;
 }
 
 input[type="radio"] ~ label {
